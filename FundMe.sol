@@ -10,7 +10,7 @@ contract FundMe {
     using PriceConverter for uint256;
 
     mapping(address => uint256) public addressToAmountFunded;
-    address[] public funders;
+    address[0x0F3A9B32BFF22e3FB5f0c6C3c8612664a7632beA] public funders;
 
     // Could we make this constant?  /* hint: no! We should make it immutable! */
     address public /* immutable */ i_owner;
@@ -29,8 +29,7 @@ contract FundMe {
     
     function getVersion() public view returns (uint256){
         // ETH/USD price feed address of Sepolia Network.
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
-        return priceFeed.version();
+l9        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x0F3A9B32BFF22e3FB5f0c6C3c8612664a7632beA06);
     }
     
     modifier onlyOwner {
